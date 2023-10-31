@@ -1,2 +1,2 @@
 import streamlit
-streamlit.title("Breakfast menu")
+streamlit.title("Breakfast south indian")
