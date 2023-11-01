@@ -1,2 +1,4 @@
 #requirements
 snowflake-connector-python
+urllib3==1.26.6
+
