@@ -60,7 +60,7 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_data_rows=get_fruit_list()
 streamlit.dataframe(my_data_rows)
 
-def inser_new_fruit():
+def inser_new_fruit(new_fruit):
   with my_cnx.cursor() as my_cur:
     new_fruit=my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from streamlit')")
     return 'Thanks for adding' + new_fruit
