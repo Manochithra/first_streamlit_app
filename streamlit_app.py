@@ -62,7 +62,7 @@ streamlit.dataframe(my_data_rows)
 
 def insert_new_fruit(new_fruit):
   with my_cnx.cursor() as my_cur:
-    my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from streamlit')")
+    my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('"+ new_fruit"')")
     return 'Thanks for adding' + new_fruit
     
 add_my_fruit = streamlit.text_input('What fruit you would like to add?')
